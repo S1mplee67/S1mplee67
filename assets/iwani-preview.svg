@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="535" viewBox="0 0 1200 535" role="img" aria-labelledby="title desc">
+<title id="title">iWani — Project Nexus | animated Android accessibility app concept</title>
+<desc id="desc">Original retro Android phone preview for the iWani collaborative project, showing a subtly animated 21-landmark hand skeleton, a sample recognition alphabet, offline mode, subtitles, and an emergency SOS interface. Illustrative, not a recording of the running application.</desc>
+<defs>
+<linearGradient id="scene" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101f21"/><stop offset="1" stop-color="#0c1617"/></linearGradient>
+<pattern id="dotgrid" width="17" height="17" patternUnits="userSpaceOnUse"><path d="M17 0H0V17" fill="none" stroke="#6e938b" opacity=".16" stroke-width=".8"/></pattern>
+<clipPath id="phoneclip"><rect x="743" y="80" width="257" height="370" rx="14"/></clipPath>
+<filter id="soft"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="1200" height="535" rx="12" fill="#0c1617"/>
+<rect x="1" y="1" width="1198" height="533" rx="11" fill="none" stroke="#345154" stroke-width="1.8"/>
+<rect x="2" y="2" width="1196" height="35" rx="10" fill="#1a2a2c"/>
+<path d="M2 37H1198" stroke="#345154"/>
+<circle cx="23" cy="19" r="4" fill="#dcb17a"/><circle cx="38" cy="19" r="4" fill="#93c1ae" opacity=".7"/><circle cx="53" cy="19" r="4" fill="#6e938b"/>
+<text x="76" y="24" fill="#a5d6c5" font-family="Consolas,monospace" font-size="12">PROJECT NEXUS / ANDROID STUDIO</text>
+<text x="1170" y="24" text-anchor="end" fill="#6e938b" font-family="Consolas,monospace" font-size="11">TEAM PROJECT  ·  CONCEPT PREVIEW</text>
+<rect x="26" y="54" width="640" height="411" rx="8" fill="url(#scene)" stroke="#264044"/>
+<path d="M26 54H666V465H26Z" fill="url(#dotgrid)" opacity=".8"/>
+<text x="54" y="114" font-family="Georgia,serif" font-size="59" font-weight="bold" fill="#eee9d9" letter-spacing="-2">iWani</text>
+<rect x="266" y="82" width="124" height="28" rx="5" fill="#3c3428" stroke="#9a7b46"/>
+<text x="328" y="100" font-family="Consolas,monospace" font-size="12" text-anchor="middle" fill="#dcb17a">VERSION 5.0</text>
+<text x="55" y="142" fill="#93c1ae" font-family="Consolas,monospace" font-size="13" letter-spacing="1.2">FILIPINO SIGN LANGUAGE  /  ACCESSIBILITY</text>
+<text x="55" y="168" fill="#a2aea4" font-family="Arial,sans-serif" font-size="14">On-device Android communication and emergency assistance</text>
+<path d="M55 187H626" stroke="#345154"/>
+<g>
+ <rect x="54" y="206" width="566" height="65" rx="8" fill="#142426" stroke="#345154" stroke-width="1"/>
+ <rect x="54" y="206" width="4" height="65" rx="2" fill="#93c1ae" opacity=".65"/>
+ <text x="76" y="234" fill="#dcb17a" font-size="14" font-family="Consolas,monospace">01</text>
+ <text x="120" y="233" fill="#eee9d9" font-size="17" font-family="Arial,sans-serif" font-weight="600">Real-time sign recognition</text>
+ <text x="120" y="255" fill="#a2aea4" font-size="12.4" font-family="Consolas,monospace">MEDIAPIPE  /  21 HAND LANDMARKS  /  FSL A–Z</text>
+ </g>
+<g>
+ <rect x="54" y="280" width="566" height="65" rx="8" fill="#142426" stroke="#345154" stroke-width="1"/>
+ <rect x="54" y="280" width="4" height="65" rx="2" fill="#93c1ae" opacity=".65"/>
+ <text x="76" y="308" fill="#dcb17a" font-size="14" font-family="Consolas,monospace">02</text>
+ <text x="120" y="307" fill="#eee9d9" font-size="17" font-family="Arial,sans-serif" font-weight="600">Offline bilingual communication</text>
+ <text x="120" y="329" fill="#a2aea4" font-size="12.4" font-family="Consolas,monospace">KOTLIN + JETPACK COMPOSE  /  TEXT TO SPEECH</text>
+ </g>
+<g>
+ <rect x="54" y="354" width="566" height="65" rx="8" fill="#142426" stroke="#345154" stroke-width="1"/>
+ <rect x="54" y="354" width="4" height="65" rx="2" fill="#93c1ae" opacity=".65"/>
+ <text x="76" y="382" fill="#dcb17a" font-size="14" font-family="Consolas,monospace">03</text>
+ <text x="120" y="381" fill="#eee9d9" font-size="17" font-family="Arial,sans-serif" font-weight="600">SOS and accessible feedback</text>
+ <text x="120" y="403" fill="#a2aea4" font-size="12.4" font-family="Consolas,monospace">CAMERAX CAPTIONS  /  HAPTICS  /  SAFETY</text>
+ </g>
+<text x="54" y="449" fill="#6e938b" font-family="Consolas,monospace" font-size="11">DEVELOPMENT FOCUS: UI · CAMERA · SUBTITLES · MOTION</text>
+<!-- Animated phone -->
+<rect x="729" y="63" width="286" height="402" rx="28" fill="#070d10" stroke="#6e938b" stroke-width="2.6"/>
+<rect x="738" y="72" width="268" height="384" rx="21" fill="#142426"/>
+<g clip-path="url(#phoneclip)">
+ <rect x="743" y="80" width="257" height="370" fill="#142526"/>
+ <rect x="743" y="112" width="257" height="231" fill="#193437"/>
+ <rect x="743" y="112" width="257" height="231" fill="url(#dotgrid)"/>
+ <path d="M757 143h22m-22 0v20M983 143h-22m22 0v20M757 317h22m-22 0v-20M983 317h-22m22 0v-20" stroke="#93c1ae" stroke-width="2" opacity=".7" fill="none"/>
+ <rect x="782" y="160" width="173" height="168" rx="5" stroke="#93c1ae" fill="none" stroke-dasharray="4 6" opacity=".38"/>
+ <rect x="744" y="80" width="257" height="32" fill="#101f22"/>
+ <text x="759" y="101" fill="#eee9d9" font-family="Consolas,monospace" font-size="12">iWani</text>
+ <circle cx="913" cy="96" r="4" fill="#93c1ae" class="blink"/>
+ <text x="925" y="101" fill="#a2aea4" font-family="Consolas,monospace" font-size="10">OFFLINE</text>
+ <text x="756" y="129" fill="#93c1ae" font-family="Consolas,monospace" font-size="10">CAMERA / HAND TRACKING</text>
+ <text x="985" y="129" text-anchor="end" fill="#a2aea4" font-family="Consolas,monospace" font-size="10">LIVE</text>
+ <g class="hand-drift">
+  <path d="M857 305L838 278L846 259L863 256L882 259L897 271Z" fill="#93c1ae" opacity=".13"/>
+  <path d="M857 305L838 278L819 254L806 247L797 244" fill="none" stroke="#93c1ae" stroke-width="2.6" opacity=".88"/><path d="M857 305L846 259L836 228L826 200L822 176" fill="none" stroke="#a5d6c5" stroke-width="2.1" opacity=".88"/><path d="M857 305L863 256L864 220L867 192L869 169" fill="none" stroke="#93c1ae" stroke-width="2.1" opacity=".88"/><path d="M857 305L882 259L891 229L900 207L903 187" fill="none" stroke="#a5d6c5" stroke-width="2.1" opacity=".88"/><path d="M857 305L897 271L916 250L927 234L935 221" fill="none" stroke="#93c1ae" stroke-width="2.1" opacity=".88"/>
+  <circle cx="857" cy="305" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0s"/><circle cx="838" cy="278" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.19s"/><circle cx="819" cy="254" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.38s"/><circle cx="806" cy="247" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.5700000000000001s"/><circle cx="797" cy="244" r="4.1" fill="#dcb17a" class="joint" style="animation-delay:-0.76s"/><circle cx="846" cy="259" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.95s"/><circle cx="836" cy="228" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-1.1400000000000001s"/><circle cx="826" cy="200" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0s"/><circle cx="822" cy="176" r="4.1" fill="#dcb17a" class="joint" style="animation-delay:-0.19s"/><circle cx="863" cy="256" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.38s"/><circle cx="864" cy="220" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.5700000000000001s"/><circle cx="867" cy="192" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.76s"/><circle cx="869" cy="169" r="4.1" fill="#dcb17a" class="joint" style="animation-delay:-0.95s"/><circle cx="882" cy="259" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-1.1400000000000001s"/><circle cx="891" cy="229" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0s"/><circle cx="900" cy="207" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.19s"/><circle cx="903" cy="187" r="4.1" fill="#dcb17a" class="joint" style="animation-delay:-0.38s"/><circle cx="897" cy="271" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.5700000000000001s"/><circle cx="916" cy="250" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.76s"/><circle cx="927" cy="234" r="3.1" fill="#a5d6c5" class="joint" style="animation-delay:-0.95s"/><circle cx="935" cy="221" r="4.1" fill="#dcb17a" class="joint" style="animation-delay:-1.1400000000000001s"/>
+ </g>
+ <rect x="744" y="343" width="257" height="107" fill="#0f2122" stroke="#345154"/>
+ <text x="756" y="360" fill="#6e938b" font-family="Consolas,monospace" font-size="9">RECOGNITION DEMO / A–Z</text>
+ <rect x="756" y="367" width="74" height="47" rx="6" fill="#234244" stroke="#345154"/>
+ <g class="letter-a"><text x="793" y="400" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#eee9d9">A</text></g>
+ <g class="letter-b"><text x="793" y="400" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#eee9d9">B</text></g>
+ <g class="letter-c"><text x="793" y="400" text-anchor="middle" font-family="Georgia,serif" font-size="31" fill="#eee9d9">C</text></g>
+ <text x="839" y="383" fill="#a2aea4" font-family="Consolas,monospace" font-size="9.5">SUBTITLES</text>
+ <rect x="839" y="390" width="146" height="23" rx="4" fill="#1d3435"/>
+ <text x="846" y="405" fill="#eee9d9" font-family="Consolas,monospace" font-size="10.5">FSL TO SPEECH</text>
+ <rect x="756" y="423" width="230" height="20" rx="4" fill="#4b3430"/>
+ <text x="872" y="437" fill="#e8b19a" font-family="Consolas,monospace" text-anchor="middle" font-size="10">SOS  /  ACCESSIBLE ALERT</text>
+</g>
+<rect x="843" y="68" width="55" height="5" rx="2.5" fill="#0a0d0f"/>
+<rect x="842" y="448" width="62" height="3" rx="1.5" fill="#a2aea4" opacity=".65"/>
+<path d="M1017 125H1029" stroke="#93c1ae" opacity=".6"/>
+<g><rect x="1031" y="91" width="149" height="68" rx="7" fill="#142426" stroke="#345154"/><text x="1043" y="113" fill="#6e938b" font-family="Consolas,monospace" font-size="11">VISION</text><text x="1043" y="137" fill="#eee9d9" font-family="Consolas,monospace" font-size="15">21 POINTS</text><circle cx="1163" cy="109" r="3" fill="#93c1ae" class="blink"/></g>
+<g><rect x="1031" y="178" width="149" height="68" rx="7" fill="#142426" stroke="#345154"/><text x="1043" y="200" fill="#6e938b" font-family="Consolas,monospace" font-size="11">TRANSLATION</text><text x="1043" y="224" fill="#eee9d9" font-family="Consolas,monospace" font-size="15">ON-DEVICE</text><circle cx="1163" cy="196" r="3" fill="#93c1ae" class="blink"/></g>
+<g><rect x="1031" y="265" width="149" height="68" rx="7" fill="#142426" stroke="#345154"/><text x="1043" y="287" fill="#6e938b" font-family="Consolas,monospace" font-size="11">VIDEO</text><text x="1043" y="311" fill="#eee9d9" font-family="Consolas,monospace" font-size="15">CAPTIONS</text><circle cx="1163" cy="283" r="3" fill="#93c1ae" class="blink"/></g>
+<g><rect x="1031" y="353" width="149" height="68" rx="7" fill="#142426" stroke="#594c3d"/>
+<text x="1043" y="375" fill="#6e938b" font-family="Consolas,monospace" font-size="11">SAFETY</text>
+<text x="1043" y="399" fill="#dcb17a" font-family="Consolas,monospace" font-size="15">SOS READY</text>
+<circle cx="1163" cy="371" r="3" fill="#dcb17a" class="blink"/></g>
+<path d="M20 481H1180" stroke="#345154"/>
+<text x="31" y="503" fill="#93c1ae" font-family="Consolas,monospace" font-size="10.5">KOTLIN  /  COMPOSE  /  CAMERAX  /  MEDIAPIPE</text>
+<text x="1166" y="503" text-anchor="end" fill="#a2aea4" font-family="Consolas,monospace" font-size="10.5">ANIMATED CONCEPT — NOT AN APP SCREENSHOT</text>
+<text x="31" y="521" fill="#6e938b" font-family="Consolas,monospace" font-size="9.5">ICCT COLLEGES  ·  TEAM PROJECT NEXUS</text>
+<style>
+@keyframes signal{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes handMotion{0%,100%{transform:translate(0px,0px) rotate(-1deg)}35%{transform:translate(2px,-4px) rotate(1.5deg)}70%{transform:translate(-3px,2px) rotate(-1.4deg)}}
+@keyframes jointPulse{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes letterA{0%,30%{opacity:1}33%,100%{opacity:0}}
+@keyframes letterB{0%,32%{opacity:0}34%,64%{opacity:1}67%,100%{opacity:0}}
+@keyframes letterC{0%,64%{opacity:0}67%,99%{opacity:1}100%{opacity:0}}
+.blink{animation:signal 2.6s ease-in-out infinite}
+.hand-drift{transform-origin:863px 266px;animation:handMotion 4.8s ease-in-out infinite}
+.joint{animation:jointPulse 1.8s ease-in-out infinite}
+.letter-a{animation:letterA 7.5s linear infinite}
+.letter-b{opacity:0;animation:letterB 7.5s linear infinite}
+.letter-c{opacity:0;animation:letterC 7.5s linear infinite}
+@media (prefers-reduced-motion:reduce){.blink,.hand-drift,.joint,.letter-a,.letter-b,.letter-c{animation:none!important}.letter-b,.letter-c{opacity:0!important}.letter-a{opacity:1!important}}
+</style>
+</svg>
