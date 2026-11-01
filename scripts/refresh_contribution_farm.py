@@ -303,7 +303,39 @@ def one_farm(name: str, counts: dict[date, int]) -> None:
                       f'<title>{day.isoformat()}: {count} '
                       f'{"contribution" if count == 1 else "contributions"}</title>', base)
         cows.append(base)
-    src = src[:grid_begin] + "".join(cells) + "\n" + "\n".join(cows) + "\n" + src[fence_begin:]
+    # Draw edible grass at the mouth of each grazing cow, using exactly
+    # the same tile coordinates that positioned the cow itself. Keep an
+    # external transform container so CSS swaying never overrides translate.
+    # The abducted cow does not graze.
+    grass_color = "#547C51" if light else "#86AC72"
+    grass = []
+    for day, count in sorted(activity_in_grid.items()):
+        if day == lift_day:
+            continue
+        week = (day - start_sunday).days // 7
+        weekday = (day.weekday() + 1) % 7
+        cx, cy = 92.5 + 17.5 * week, 110 + 19 * weekday
+        grass.append(
+            f'<g data-cow-day="{day.isoformat()}" '
+            f'transform="translate({cx:.1f} {cy:.1f})">'
+            f'<g class="grass-sway" fill="none" stroke="{grass_color}" '
+            f'stroke-width="1.45" stroke-linecap="round" opacity=".95">'
+            '<path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/>'
+            '</g></g>'
+        )
+    src = (src[:grid_begin] + "".join(cells) + "\n"
+           + "\n".join(cows) + "\n"
+           + "<!-- Grazing grass tied to exact contribution cow locations -->\n"
+           + "\n".join(grass) + "\n" + src[fence_begin:])
+
+    # Old snapshots hardcoded grass at fixed right-side positions. Remove
+    # that obsolete layer; otherwise it drifts away from the moving cow grid.
+    src, old_grass_removed = re.subn(
+        r'<g class="grass-sway" fill="none" stroke="[^"]+" '
+        r'stroke-width="1\.1" opacity="\.85">.*?</g>\s*'
+        r'(?=<!-- Two chickens)',
+        "", src, count=1, flags=re.S,
+    )
 
     src = align_ufos(src, activity_in_grid, start_sunday)
 
