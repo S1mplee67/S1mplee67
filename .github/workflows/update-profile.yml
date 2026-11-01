@@ -32,6 +32,10 @@ jobs:
               if '@keyframes' not in text:
                   raise SystemExit(f'Missing animation in {filename}')
               if filename.startswith('contribution-farm'):
-                  if '34 CONTRIBUTIONS / 4 DAYS' not in text or text.count('<title>2026-10-') != 4:
-                      raise SystemExit(f'Contribution snapshot mismatch in {filename}')
+                  import re
+                  total_match = re.search(r'(\\d+) CONTRIBUTIONS / (\\d+) DAYS', text)
+                  cow_counts = [int(x) for x in re.findall(r'<title>\\d{4}-\\d{2}-\\d{2}: (\\d+) contributions?</title>', text)]
+                  if (not total_match or len(cow_counts) != int(total_match.group(2))
+                          or sum(cow_counts) != int(total_match.group(1))):
+                      raise SystemExit(f'Contribution cow totals do not match labels in {filename}')
           PY
