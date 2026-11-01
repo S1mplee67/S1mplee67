@@ -1,0 +1,61 @@
+name: Refresh contribution farm
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - scripts/refresh_contribution_farm.py
+      - .github/workflows/refresh-contribution-farm.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-farm-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Read GitHub contribution calendar and update farm
+        run: python3 scripts/refresh_contribution_farm.py
+
+      - name: Validate both SVGs and contribution labels
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          import re
+
+          for name in ["contribution-farm.svg", "contribution-farm-light.svg"]:
+              content = (Path("assets") / name).read_text(encoding="utf-8")
+              ET.fromstring(content)
+              match = re.search(r"(\d+) CONTRIBUTIONS / (\d+) DAYS", content)
+              cows = [int(n) for n in re.findall(
+                  r"<title>\d{4}-\d{2}-\d{2}: (\d+) contributions?</title>",
+                  content)]
+              if not match or sum(cows) != int(match.group(1)) or len(cows) != int(match.group(2)):
+                  raise SystemExit(f"Invalid data for {name}")
+              print(name, match.group(0), "OK")
+          PY
+
+      - name: Commit refreshed snapshot when changed
+        run: |
+          if ! git diff --quiet -- README.md assets/contribution-farm.svg assets/contribution-farm-light.svg; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md assets/contribution-farm.svg assets/contribution-farm-light.svg
+            git commit -m "Refresh contribution farm from GitHub calendar"
+            git push
+          else
+            echo "Farm snapshot is already current."
+          fi
