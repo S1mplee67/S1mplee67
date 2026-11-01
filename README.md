@@ -10,6 +10,8 @@
   <img src="https://img.shields.io/badge/Backend-334B49?style=flat-square&logoColor=F0E8DC" alt="Backend development" />
   <img src="https://img.shields.io/badge/AI_%26_automation-learning-637E77?style=flat-square&logoColor=F0E8DC" alt="Learning AI and automation" />
   <img src="https://img.shields.io/badge/JavaScript-596E5F?style=flat-square&logo=javascript&logoColor=F0E8DC" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Kotlin-3E6263?style=flat-square&logo=kotlin&logoColor=F0E8DC" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/Android_UI-526C62?style=flat-square&logo=android&logoColor=F0E8DC" alt="Android user interface development" />
 </p>
 
 ## Hey, I'm W3NCY?
@@ -24,9 +26,23 @@ I like making small tools that are actually useful. Right now I'm learning more 
   <img src="./assets/workbench.svg" width="100%" alt="Windows apps with C# and .NET, backend development, and learning AI automation" />
 </p>
 
-I've been spending time on offline desktop software, group project development, and figuring out how to automate repetitive work.
+I've been spending time on offline desktop tools, Android accessibility interfaces, collaborative engineering projects, and figuring out how to automate repetitive work.
 
 ## Projects
+
+### [iWani — Project Nexus | FSL Accessibility for Android](https://github.com/S1mplee67/iWani)
+
+**Collaborative Computer Engineering project · ICCT Colleges.** iWani is an Android accessibility application developed by our team to support communication for Deaf, hard-of-hearing and speech-impaired Filipinos. The project combines **Filipino Sign Language (FSL) letter recognition**, on-device translation, text-to-speech, video recording with captions, and emergency SOS features.
+
+**My role — Lead Frontend & Backend Developer.** The project's team credits list my work on the **Jetpack Compose UI architecture**, **CameraX recording and burned-in subtitles**, and the **animated interface and visual effects**. The machine-learning classifier, NLP pipeline, testing and other features are collaborative work with the rest of Project Nexus.
+
+<p align="center">
+  <img src="./assets/iwani-preview.svg" width="100%" alt="Animated concept illustration of the iWani Android app with hand-landmark recognition, FSL letter demo, subtitle interface, and SOS controls. Not an actual app screenshot." />
+</p>
+
+<sub>Illustrative preview based on the project's documented features; see the repository for implementation details.</sub>
+
+[Explore iWani on GitHub](https://github.com/S1mplee67/iWani)
 
 ### [5 F!NGERS — Typing & Code Trainer](https://github.com/S1mplee67/5-fingers)
 
