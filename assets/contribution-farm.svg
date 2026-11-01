@@ -137,6 +137,14 @@
 <rect x="2" y="10" width="2" height="3" fill="#101B20"/><rect x="9" y="10" width="2" height="3" fill="#101B20"/>
 <circle cx="12.2" cy="6.3" r=".65" fill="#101B20"/></g><path class="cow-wag-tail" d="M.5 4L-1 2" stroke="#101B20" stroke-width="1"/>
 </g></g>
+<!-- Grazing grass tied to exact contribution cow locations -->
+<g data-cow-day="2026-10-07" transform="translate(932.5 167.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
+<g data-cow-day="2026-10-08" transform="translate(932.5 186.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
+<g data-cow-day="2026-10-12" transform="translate(950.0 129.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
+<g data-cow-day="2026-10-15" transform="translate(950.0 186.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
+<g data-cow-day="2026-10-16" transform="translate(950.0 205.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
+<g data-cow-day="2026-10-23" transform="translate(967.5 205.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
+<g data-cow-day="2026-11-01" transform="translate(1002.5 110.0)"><g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.45" stroke-linecap="round" opacity=".95"><path d="M14 11l-2-6m2 6 3-8M16 11l4-5"/></g></g>
 <!-- Fence sections inside the contribution calendar, never below it -->
 <g opacity=".76" fill="#796D59" stroke="none">
 <rect x="119" y="229" width="85" height="3" rx=".4"/>
@@ -195,7 +203,6 @@
   <rect x="691" y="203" width="25" height="18" rx="2" fill="#2D5840" opacity=".7"/>
   <path d="M698 210l3-4 3 4m6 2l3-5 2 5" stroke="#86AC72" stroke-width="2" fill="none"/>
 </g>
-<g class="grass-sway" fill="none" stroke="#86AC72" stroke-width="1.1" opacity=".85"><path d="M986 179l-2-4m2 4 2-6M986 198l-3-4m3 4 2-6"/><path d="M1003 141l-2-5m2 5 3-5M1003 160l-2-5m2 5 3-5M1003 198l-2-5m2 5 3-5M1003 217l-2-5m2 5 3-5"/></g>
 <!-- Two chickens, a sheep and a rabbit are decorative, not contributions -->
 <g transform="translate(477 188)"><g class="chicken-peck">
   <title>Chicken pecking around the vegetable patch</title>
