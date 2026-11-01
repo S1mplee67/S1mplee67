@@ -74,6 +74,134 @@ def activity() -> dict[date, int]:
     return recent
 
 
+
+def align_ufos(src: str, counts: dict[date, int], start_sunday: date) -> str:
+    """Anchor three ships and their beams to real cow positions each refresh.
+
+    The cow in the first calendar row has no safe space *above* it because
+    month labels occupy y=91. For that target, the UFO hovers to its right and
+    aims a diagonal beam back at the cow. All other targets use vertical beams.
+    """
+    rows = []
+    for day, count in sorted(counts.items()):
+        week = (day - start_sunday).days // 7
+        weekday = (day.weekday() + 1) % 7
+        rows.append({
+            "day": day, "count": count,
+            "x": 92.5 + 17.5 * week,
+            "y": 110 + 19 * weekday
+        })
+    if not rows:
+        raise ValueError("Cannot position UFOs without contribution cows")
+
+    peak = max(rows, key=lambda item: (item["count"], item["day"]))
+    newest = rows[-1]
+    # A slightly lower early cow keeps the first and featured craft separated.
+    earliest_pool = [
+        item for item in rows
+        if item["day"] not in (peak["day"], newest["day"])
+    ]
+    early = next(
+        (item for item in earliest_pool if item["y"] >= 185),
+        earliest_pool[0] if earliest_pool else rows[0]
+    )
+    desired = [early, peak, newest]
+    selected = []
+    for item in desired:
+        if item["day"] in [existing["day"] for existing in selected]:
+            item = next(
+                (candidate for candidate in rows
+                 if candidate["day"] not in [x["day"] for x in selected]),
+                item
+            )
+        selected.append(item)
+
+    start_marker = "<!-- Three small independent scout ships"
+    start = src.find(start_marker)
+    end = src.find('<path d="M17 271H1182"', start)
+    if start < 0 or end < 0:
+        raise ValueError("Existing UFO scene delimiters not found")
+    scene = src[start:end]
+    updated = [
+        "<!-- Three UFOs dynamically aligned to cow dates; "
+        "beams terminate on their targeted contribution tiles -->"
+    ]
+    for idx, (kind, target) in enumerate(zip("abc", selected)):
+        pattern = (
+            r'<g transform="translate\([\d.]+ [\d.]+\)">\s*'
+            rf'<g class="ufo-{kind}">.*?</g>\s*</g>\s*</g>'
+        )
+        matches = list(re.finditer(pattern, scene, flags=re.S))
+        if len(matches) != 1:
+            raise ValueError(f"Cannot locate original UFO {kind} artwork")
+        ship = matches[0].group(0)
+        cow_x = target["x"] + 7.0
+        cow_y = target["y"] + 8.0
+        if target["y"] <= 135:
+            # First-row cows need a side approach to avoid the month header.
+            ufo_x = cow_x + 49
+            ufo_y = target["y"] + 18
+        else:
+            ufo_x = cow_x
+            ufo_y = target["y"] - 33
+        dx, dy = cow_x - ufo_x, cow_y - ufo_y
+        if dx < -20:
+            # Beam runs diagonally back to the upper-right-grid cow.
+            beam = (
+                f"M-6 13L{dx - 6:.1f} {dy - 7:.1f}"
+                f"L{dx + 6:.1f} {dy + 7:.1f}L6 13Z"
+            )
+        else:
+            # Vertical beam lands on the cow, not beneath its grid tile.
+            beam = f"M-7 13L-12 {dy + 4:.1f}H12L7 13Z"
+
+        group_open = re.match(r'<g transform="translate\([\d.]+ [\d.]+\)">', ship)
+        if not group_open:
+            raise ValueError("Unexpected spacecraft group structure")
+        metadata = (
+            f'<g data-ufo-target="{target["day"]}" '
+            f'data-cow-x="{cow_x:.1f}" data-cow-y="{cow_y:.1f}" '
+            f'transform="translate({ufo_x:.1f} {ufo_y:.1f})">'
+        )
+        ship = metadata + ship[group_open.end():]
+        ship, n = re.subn(
+            r'(<path class="ray-[ab]" d=")[^"]+(" fill=)',
+            lambda match: match.group(1) + beam + match.group(2),
+            ship, count=1,
+        )
+        if n != 1:
+            raise ValueError(f"UFO {kind} is missing its tractor beam")
+        updated.append(ship)
+    src = src[:start] + "\n".join(updated) + "\n" + src[end:]
+
+    # Ships now hover directly over their target while their beam is active.
+    # Previously they moved 80px sideways during the beam, losing alignment.
+    flight_start = src.find("@keyframes scoutLeft")
+    flight_end = src.find("@keyframes tractorRay", flight_start)
+    if flight_start < 0 or flight_end < 0:
+        raise ValueError("UFO flight animations are missing")
+    new_flight = """@keyframes scoutLeft {
+  0%,8%{opacity:0;transform:translate(-90px,-24px)}
+  18%{opacity:1;transform:translate(-10px,-4px)}
+  28%,62%{opacity:1;transform:translate(0,0)}
+  77%{opacity:.8;transform:translate(50px,-15px)}
+  95%,100%{opacity:0;transform:translate(94px,-32px)}
+}
+@keyframes scoutCenter {
+  0%,18%{opacity:0;transform:translate(58px,-26px)}
+  29%,74%{opacity:1;transform:translate(0,0)}
+  88%,100%{opacity:0;transform:translate(-78px,-29px)}
+}
+@keyframes scoutRight {
+  0%,29%{opacity:0;transform:translate(70px,-27px)}
+  40%,76%{opacity:1;transform:translate(0,0)}
+  88%,100%{opacity:0;transform:translate(-75px,-32px)}
+}
+"""
+    src = src[:flight_start] + new_flight + src[flight_end:]
+    return src
+
+
 def one_farm(name: str, counts: dict[date, int]) -> None:
     path = ASSETS / name
     src = path.read_text(encoding="utf-8")
@@ -176,6 +304,8 @@ def one_farm(name: str, counts: dict[date, int]) -> None:
                       f'{"contribution" if count == 1 else "contributions"}</title>', base)
         cows.append(base)
     src = src[:grid_begin] + "".join(cells) + "\n" + "\n".join(cows) + "\n" + src[fence_begin:]
+
+    src = align_ufos(src, activity_in_grid, start_sunday)
 
     # Use exact live counts across header, legend and accessible description.
     src, n1 = re.subn(r'\d+ CONTRIBUTIONS / \d+ DAYS',
