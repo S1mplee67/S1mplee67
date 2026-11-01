@@ -1,24 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="farmtitle farmdesc">
 <title id="farmtitle">W3NCY? contribution farm — night edition</title>
-<desc id="farmdesc">Retro animated farm representing 66 public GitHub contributions across 8 active days as of 2026-11-01. Each cow marks one actual active calendar day. The three animated UFOs, chickens, sheep, rabbit, farmhouse, trees and fences are decorative. This is a dated snapshot, not a live calendar.</desc>
+<desc id="farmdesc">Retro animated farm representing 67 public GitHub contributions across 8 active days as of 2026-11-01. Each cow marks one actual active calendar day. The three animated UFOs, chickens, sheep, rabbit, farmhouse, trees and fences are decorative. This is a dated snapshot, not a live calendar.</desc>
 <style>
 @keyframes scoutLeft {
-  0%,8%{opacity:0;transform:translate(-115px,-26px)}
-  18%,34%{opacity:1;transform:translate(0,0)}
-  43%,57%{opacity:1;transform:translate(84px,4px)}
-  69%,100%{opacity:0;transform:translate(150px,-42px)}
+  0%,8%{opacity:0;transform:translate(-90px,-24px)}
+  18%{opacity:1;transform:translate(-10px,-4px)}
+  28%,62%{opacity:1;transform:translate(0,0)}
+  77%{opacity:.8;transform:translate(50px,-15px)}
+  95%,100%{opacity:0;transform:translate(94px,-32px)}
 }
 @keyframes scoutCenter {
-  0%,18%{opacity:0;transform:translate(55px,-24px)}
-  29%,51%{opacity:1;transform:translate(0,0)}
-  58%,69%{opacity:1;transform:translate(13px,-5px)}
-  80%,100%{opacity:0;transform:translate(-160px,-45px)}
+  0%,18%{opacity:0;transform:translate(58px,-26px)}
+  29%,74%{opacity:1;transform:translate(0,0)}
+  88%,100%{opacity:0;transform:translate(-78px,-29px)}
 }
 @keyframes scoutRight {
-  0%,29%{opacity:0;transform:translate(140px,-30px)}
-  40%,70%{opacity:1;transform:translate(0,0)}
-  77%,84%{opacity:1;transform:translate(-21px,-7px)}
-  96%,100%{opacity:0;transform:translate(-190px,-51px)}
+  0%,29%{opacity:0;transform:translate(70px,-27px)}
+  40%,76%{opacity:1;transform:translate(0,0)}
+  88%,100%{opacity:0;transform:translate(-75px,-32px)}
 }
 @keyframes tractorRay {
   0%,36%,58%,100%{opacity:0;transform:scaleY(.12)}
@@ -77,7 +76,7 @@
 <rect width="1200" height="44" rx="12" fill="#223139"/><path d="M1 44H1199" stroke="#526A5A" stroke-width="1"/>
 <rect x="20" y="16" width="10" height="10" fill="#496855"/><rect x="36" y="16" width="10" height="10" fill="#796D59"/>
 <text x="61" y="28" font-family="Consolas,monospace" font-size="16" fill="#D3D7C6">CONTRIBUTION FARM</text>
-<text x="1173" y="28" text-anchor="end" font-family="Consolas,monospace" font-size="13" fill="#D3D7C6">66 CONTRIBUTIONS / 8 DAYS</text>
+<text x="1173" y="28" text-anchor="end" font-family="Consolas,monospace" font-size="13" fill="#D3D7C6">67 CONTRIBUTIONS / 8 DAYS</text>
 <rect x="76" y="97" width="963" height="157" rx="7" fill="#344B3A" opacity=".45"/>
 <text x="92" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Nov</text><text x="179.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Dec</text><text x="249.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Jan</text><text x="319.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Feb</text><text x="389.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Mar</text><text x="477" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Apr</text><text x="547" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">May</text><text x="634.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Jun</text><text x="704.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Jul</text><text x="774.5" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Aug</text><text x="862" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Sep</text><text x="932" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Oct</text><text x="1002" y="91" font-family="Consolas,monospace" font-size="10" fill="#97AAA0">Nov</text>
 <g font-family="Consolas,monospace" font-size="10" fill="#97AAA0"><text x="43" y="131">Mon</text><text x="43" y="169">Wed</text><text x="43" y="207">Fri</text></g>
@@ -131,7 +130,7 @@
 <rect x="2" y="10" width="2" height="3" fill="#101B20"/><rect x="9" y="10" width="2" height="3" fill="#101B20"/>
 <circle cx="12.2" cy="6.3" r=".65" fill="#101B20"/></g><path class="cow-wag-tail" d="M.5 4L-1 2" stroke="#101B20" stroke-width="1"/>
 </g></g>
-<g transform="translate(1002.5,110.0)"><title>2026-11-01: 5 contributions</title><g class="cow-idle">
+<g transform="translate(1002.5,110.0)"><title>2026-11-01: 6 contributions</title><g class="cow-idle">
 <path d="M1 3H11V10H1Z" fill="#CBD0BB" stroke="#101B20" stroke-width=".6"/>
 <g class="cow-graze-head"><rect x="10" y="4" width="4" height="5" rx=".7" fill="#CBD0BB" stroke="#101B20" stroke-width=".6"/>
 <rect x="3" y="5" width="3" height="3" fill="#6B7768"/><rect x="8" y="7" width="2.5" height="2.2" fill="#6B7768"/>
@@ -242,10 +241,10 @@
 </g></g>
 <text class="question" x="106" y="-12" font-family="Consolas,monospace" font-size="24" fill="#C7A47B">?</text>
 </g>
-<!-- Three small independent scout ships investigating the four actual contribution cows -->
-<g transform="translate(914 113)">
+<!-- Three UFOs dynamically aligned to cow dates; beams terminate on their targeted contribution tiles -->
+<g data-ufo-target="2026-10-08" data-cow-x="939.5" data-cow-y="194.0" transform="translate(939.5 153.0)">
   <g class="ufo-a">
-    <path class="ray-a" d="M-7 19L-14 72H14L7 19Z" fill="#9AAE85"/>
+    <path class="ray-a" d="M-7 13L-12 45.0H12L7 13Z" fill="#9AAE85"/>
     <g transform="scale(0.58)">
       <path d="M-34 13L-24 8H24L34 13L22 20H-22Z" fill="#758B88" stroke="#101B20" stroke-width="2"/>
       <path d="M-15 8Q-13-13 0-14Q13-13 15 8Z" fill="#23313A" stroke="#758B88" stroke-width="2"/>
@@ -255,9 +254,9 @@
     </g>
   </g>
 </g>
-<g transform="translate(971 115)">
+<g data-ufo-target="2026-10-13" data-cow-x="957.0" data-cow-y="156.0" transform="translate(957.0 115.0)">
   <g class="ufo-b">
-    <path class="ray-b" d="M-7 19L-14 72H14L7 19Z" fill="#9AAE85"/>
+    <path class="ray-b" d="M-7 13L-12 45.0H12L7 13Z" fill="#9AAE85"/>
     <g transform="scale(0.52)">
       <path d="M-34 13L-24 8H24L34 13L22 20H-22Z" fill="#758B88" stroke="#101B20" stroke-width="2"/>
       <path d="M-15 8Q-13-13 0-14Q13-13 15 8Z" fill="#23313A" stroke="#758B88" stroke-width="2"/>
@@ -267,9 +266,9 @@
     </g>
   </g>
 </g>
-<g transform="translate(1013 109)">
+<g data-ufo-target="2026-11-01" data-cow-x="1009.5" data-cow-y="118.0" transform="translate(1058.5 128.0)">
   <g class="ufo-c">
-    <path class="ray-a" d="M-7 19L-14 72H14L7 19Z" fill="#9AAE85"/>
+    <path class="ray-a" d="M-6 13L-55.0 -17.0L-43.0 -3.0L6 13Z" fill="#9AAE85"/>
     <g transform="scale(0.48)">
       <path d="M-34 13L-24 8H24L34 13L22 20H-22Z" fill="#758B88" stroke="#101B20" stroke-width="2"/>
       <path d="M-15 8Q-13-13 0-14Q13-13 15 8Z" fill="#23313A" stroke="#758B88" stroke-width="2"/>
@@ -280,6 +279,6 @@
   </g>
 </g>
 <path d="M17 271H1182" stroke="#526A5A" opacity=".6"/>
-<text x="22" y="288" font-family="Consolas,monospace" font-size="10.5" fill="#97AAA0">COWS = ACTIVE DAYS | 1 / 4 / 16 / 19 / 16 / 4 / 1 / 5 CONTRIBUTIONS</text>
+<text x="22" y="288" font-family="Consolas,monospace" font-size="10.5" fill="#97AAA0">COWS = ACTIVE DAYS | 1 / 4 / 16 / 19 / 16 / 4 / 1 / 6 CONTRIBUTIONS</text>
 <text x="1180" y="288" text-anchor="end" font-family="Consolas,monospace" font-size="10.5" fill="#97AAA0">SNAPSHOT : 2026-11-01</text>
 </svg>
